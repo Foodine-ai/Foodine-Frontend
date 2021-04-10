@@ -20,7 +20,7 @@ import logo from '../login/bg.jpg'
 const Login = () => {
   return (
     <div className="c-app c-default-layout flex-row align-items-center scrool-not">
-    <img src={logo} className="bg"/>
+      <img src={logo} className="bg" />
       <CContainer >
         <CRow className="justify-content-center">
           <CCol md="9" >
@@ -46,6 +46,13 @@ const Login = () => {
                       </CInputGroupPrepend>
                       <CInput type="password" placeholder="Password" autoComplete="current-password" />
                     </CInputGroup>
+
+                    <label className="label">Who are you? 🤔</label>
+                    <select className="selectVal">
+                      <option value="student">student 😵</option>
+                      <option value="admin">admin 🤑</option>
+                    </select>
+
                     <CRow>
                       <CCol xs="6">
                         <CButton id="body-card" className="px-4">Login</CButton>
@@ -57,14 +64,14 @@ const Login = () => {
                   </CForm>
                 </CCardBody>
               </CCard>
-              <CCard className="text-black py-5 d-md-down-none ml-1" style={{ height: '100%' }} >
-                <CCardBody className="text-center">
+              <CCard className="text-black py-5 ml-1" style={{ height: '100%' }} >
+                <CCardBody id="text-center">
                   <div >
                     <h3>New User? Get yourself registered now:)</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                       labore et dolore magna aliqua.</p>
                     <Link to="/register">
-                      <CButton id="body-card" className="mt-3" active tabIndex={-1}>Register Now!</CButton>
+                      <CButton id="body-card" style={{marginLeft:0}}>Register Now!</CButton>
                     </Link>
                   </div>
                 </CCardBody>

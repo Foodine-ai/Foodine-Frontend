@@ -12,16 +12,17 @@ import {
   CLink
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
+import { Link } from 'react-router-dom';
 
 // routes config
 import routes from '../routes'
 
-import { 
+import {
   TheHeaderDropdown,
   TheHeaderDropdownMssg,
   TheHeaderDropdownNotif,
   TheHeaderDropdownTasks
-}  from './index'
+} from './index'
 
 const TheHeader = () => {
   const dispatch = useDispatch()
@@ -29,12 +30,12 @@ const TheHeader = () => {
 
   const toggleSidebar = () => {
     const val = [true, 'responsive'].includes(sidebarShow) ? false : 'responsive'
-    dispatch({type: 'set', sidebarShow: val})
+    dispatch({ type: 'set', sidebarShow: val })
   }
 
   const toggleSidebarMobile = () => {
     const val = [false, 'responsive'].includes(sidebarShow) ? true : 'responsive'
-    dispatch({type: 'set', sidebarShow: val})
+    dispatch({ type: 'set', sidebarShow: val })
   }
 
   return (
@@ -49,14 +50,14 @@ const TheHeader = () => {
         className="ml-3 d-md-down-none"
         onClick={toggleSidebar}
       />
-     
+
 
       <CHeaderNav className="d-md-down-none mr-auto">
         <CHeaderNavItem className="px-3" >
           <CHeaderNavLink to="/dashboard">Dashboard</CHeaderNavLink>
         </CHeaderNavItem>
       </CHeaderNav>
-      <button className="btn">Login</button>
+      <Link to="/login"><button className="btn">Login</button></Link>
     </CHeader>
   )
 }

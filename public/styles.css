@@ -34,6 +34,7 @@
     white-space: nowrap;
 }
 #body-card:hover{
+    text-decoration: none;
     border: solid 2px #EE0000;
     background-color: white;
     color:#EE0000;
@@ -42,7 +43,15 @@
     margin: 0;
     display: flex;
     justify-content: center;
-
+}
+.label{
+    font-size: 13pt;
+    font-weight: bold;
+}
+#text-center{
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
 }
 .scrool-not{
     overflow-y: hidden;
@@ -53,11 +62,13 @@
     font-weight: bold;
 }
 #navbar-white a{
+    text-decoration: none;
     background-color: white;
     color: black;
     font-weight: bold;
 }
 #navbar-white a:hover{
+    text-decoration: none;
     background-color: #EE0000;
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -83,4 +94,12 @@
     font-size: 14.5pt;
     color: black;
       font-weight: bold;
+  }
+
+  .selectVal{
+      margin: 0 1rem;
+      padding: 0 1rem;
+      border: solid 2px rgb(212, 212, 212);
+      border-radius: 10px;
+      outline: none;
   }

@@ -15,6 +15,18 @@ const _nav = [
     to: '/theme/colors',
     icon: 'cil-graph',
   },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Predict',
+    to: '/theme/colors',
+    icon: 'cil-graph',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Alerts',
+    to: '/theme/colors',
+    icon: 'cil-graph',
+  }
   
 ]
 

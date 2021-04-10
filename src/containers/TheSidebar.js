@@ -28,11 +28,10 @@ const TheSidebar = () => {
       show={show}
       onShowChange={(val) => dispatch({ type: 'set', sidebarShow: val })}
     >
-      <CSidebarBrand className="d-md-down-none" to="/">
-       <img src={logo} className="logo-img"/>
+      <CSidebarBrand className="d-md-down-none" to="/" style={{ backgroundColor: 'white' }}>
+        <img src={logo} className="logo-img" />
       </CSidebarBrand>
-      <CSidebarNav>
-
+      <CSidebarNav id="navbar-white">
         <CCreateElement
           items={navigation}
           components={{
@@ -42,8 +41,14 @@ const TheSidebar = () => {
             CSidebarNavTitle
           }}
         />
+        <div className="attend">
+          <div className="attend-inner">
+            <h5>Add attendance</h5>
+            <p>Add csv/xslx attendance files to update attendance and refresh stats</p>
+            <button id="body-card">Add Data</button>
+          </div>
+        </div>
       </CSidebarNav>
-      <CSidebarMinimizer className="c-d-md-down-none" />
     </CSidebar>
   )
 }

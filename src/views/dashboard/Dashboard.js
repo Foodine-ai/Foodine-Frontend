@@ -1,5 +1,6 @@
 import React, { lazy } from 'react';
 import Chart from 'react-google-charts';
+import messdata from './messdata.json'
 import {
   CBadge,
   CButton,
@@ -109,18 +110,24 @@ const Dashboard = () => {
       </CCard>
 
       <div className="flex">
+      {messdata.map((e)=>{
+          console.log(messdata.filter((e)=>e.day==='Monday'));
+      })}
+      
         <Chart
           width={'500px'}
           height={'400px'}
           chartType="PieChart"
           loader={<div>Loading Chart</div>}
           data={[
-            ['Task', 'Hours per Day'],
-            ['Work', 11],
-            ['Eat', 2],
-            ['Commute', 2],
-            ['Watch TV', 2],
-            ['Sleep', 7],
+            ['Weekday', 'Wastage'],
+            ['Monday', messdata.filter((e)=>e.day==='Monday')],
+            ['Tuesday', messdata.filter((e)=>e.day==='Tuesday')],
+            ['Wednesday', messdata.filter((e)=>e.day==='Wednesday')],
+            ['Thursday', messdata.filter((e)=>e.day==='Thursday')],
+            ['Friday', messdata.filter((e)=>e.day==='Friday')],
+            ['Saturday', messdata.filter((e)=>e.day==='Saturday')],
+            ['Sunday', messdata.filter((e)=>e.day==='Sunday')]
           ]}
           options={{
             title: 'My Daily Activities',
